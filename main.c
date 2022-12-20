@@ -20,7 +20,7 @@
 
 
 
-//환자 정보
+/***환자 정보
 int paitent0_serialNum=0;
 int paitent0_age=36;
 char paitent0_route={'36','10','11','19','22','0','39'};
@@ -41,23 +41,24 @@ int paitent4_serialNum=4;
 int paitent4_age=44;
 char paitent4_route={'8','12','17','11','29','0'};
 
-
+***/
 int trackInfester(int patient_no, int *detected_time, int *place);
 int main(int argc, const char * argv[]) {
     
     int menu_selection;
     void *ifct_element;
     FILE* fp;
-    int pIndex, age, time;
+    int Index, age, time;
     int placeHist[N_HISTORY];
     
     //------------- 1. loading patient info file ------------------------------
     //1-1. FILE pointer open
 
-FILE*fp;
-fp = fopen("C:\Users\hanjo\OneDrive\Documents\C++\infectionPath\patientInfo_sample.txt","r");
 
-}
+fp=fopen("patientInfo_sample.txt","r");
+
+
+
     if (argc != 2)
     {
         printf("[ERROR] syntax : infestPath (file path).");
@@ -71,16 +72,19 @@ fp = fopen("C:\Users\hanjo\OneDrive\Documents\C++\infectionPath\patientInfo_samp
         return -1;
     }
     
-    #if 
+    	char route[6];
+    	
     //1-2. loading each patient informations
-    while ( 3 == fscanf("3가지 읽기", 변수들))
+    while ( 3 == fscanf("%i %i %c", &Index, &age, &route))
     {
+    
     	for 
-			fscanf(5개 읽기) ;
+			fscanf(fp,"%d %i %c", &Index, &age, &route);
 			
-		ifct_element = ifctele_genElement(index, age, ...);
+		ifct_element = ifctele_genElement(Index, age, route);
 		
 		ifctdb_addTail(ifct_element);
+	
 		
 	}
 	#endif
@@ -118,6 +122,12 @@ fp = fopen("C:\Users\hanjo\OneDrive\Documents\C++\infectionPath\patientInfo_samp
                 break;
                 
             case MENU_PATIENT:
+                int* patient0;
+                patient0=&
+                int* patient1;
+                int* patient2;
+                int* patient3;
+                int* patient4;
                 
                 break;
                 
@@ -142,4 +152,5 @@ fp = fopen("C:\Users\hanjo\OneDrive\Documents\C++\infectionPath\patientInfo_samp
     
     
     return 0;
+}
 }
